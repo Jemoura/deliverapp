@@ -38,8 +38,7 @@ function OrderLocation({onChangeLocation}: Props) {
             position: {
               lat: item.center[1],
               lng: item.center[0]
-            },
-            place: item.place_name,
+            }
           });
         });
       
@@ -63,7 +62,7 @@ function OrderLocation({onChangeLocation}: Props) {
                 </h3>
                 <div className="filter-container">
                     <AsyncSelect 
-                        placholder="Digite um endereço para entrega"
+                        placeholder="Digite um endereço para entrega"
                         className="filter"
                         loadOptions={loadOptions}
                         onChange={value => handleChangeSelect(value as Place)}
@@ -73,7 +72,7 @@ function OrderLocation({onChangeLocation}: Props) {
                     center={address.position} 
                     zoom={13}
                     key={address.position.lat} 
-                    scrollWheelZoom={false}>
+                    scrollWheelZoom>
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
